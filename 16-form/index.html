@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <h1 class="title">Kayıt Formu</h1>
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label>Ad</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı Giriniz..." required minlength="3"
+                    maxlength="20">
+            </div>
+            <div class="form-group">
+                <label>Soyad</label>
+                <input type="text" id="surname" name="surname" placeholder="Soyadınızı Giriniz..." required
+                    minlength="3" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label>Email Adresi</label>
+                <input type="email" id="email" name="email" placeholder="a@hotmail.com" required>
+            </div>
+            <div class="form-group">
+                <label>Telefon Numarası</label>
+                <input type="tel" id="phone" name="phone" placeholder="555-555-5555" required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+            <div class="form-group">
+                <label>Şifre</label>
+                <input type="password" id="password" name="password" placeholder="Şifrenizi Giriniz..." required
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <div class="form-group">
+                <label>Şifre Tekrarı</label>
+                <input type="password" id="repassword" name="repassword" placeholder="Şifre Tekrarı" required
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <div class="form-group">
+                <label>Adres</label>
+                <textarea type="text" id="address" name="address" placeholder="Adres Giriniz" rows="5"
+                    required></textarea>
+            </div>
+            <button type="submit">Kaydol</button>
+        </form>
+
+        <div class="alertMessage">
+            <h3 id="alertTitle">Lütfen Tüm Alanları Doldurunuz!</h3>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
